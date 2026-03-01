@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Dashboard</a>
+      <a href="about.html" class="nav-link active">About</a>
+      <button type="button" id="themeToggle" class="theme-toggle">Toggle theme</button>
+    </nav>
+    <h1>About the Developer</h1>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Developer Profile</h2>
+
+      <p><strong>Name:</strong> Navtej Sidhu</p>
+
+      <h3>What this site does</h3>
+      <p>
+        This site is a simple inventory tracker. Users can add items with quantities, see them displayed
+        in a table, and view the same data in a chart. The inventory persists using browser local storage,
+        so it stays after refresh. A “Clear All” button removes all items and wipes local storage.
+      </p>
+
+      <h3>Extra features</h3>
+      <ul>
+        <li><strong>Dark mode toggle</strong> to suit visual needs.</li>
+        <li><strong>Low stock highlighting</strong> (quantity &lt; 10) to make it easy to spot items that need restocking.</li>
+      </ul>
+
+      <h3>Contact</h3>
+      <p>
+        For future contact, reach me at
+        <a href="mailto:nss20@sfu.ca">nss20@sfu.ca</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>BUS237 Assignment 2</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
