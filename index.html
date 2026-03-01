@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-link active">Dashboard</a>
+      <a href="about.html" class="nav-link">About</a>
+      <button type="button" id="themeToggle" class="theme-toggle">Toggle theme</button>
+    </nav>
+    <h1>Inventory Dashboard</h1>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Add Item</h2>
+
+      <form id="inventoryForm" class="form">
+        <div class="field">
+          <label for="itemName">Item Name</label>
+          <input
+            id="itemName"
+            name="itemName"
+            type="text"
+            placeholder="e.g., Apples"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label for="itemQty">Quantity</label>
+          <input
+            id="itemQty"
+            name="itemQty"
+            type="number"
+            placeholder="e.g., 12"
+            required
+            min="0"
+            step="1"
+          />
+        </div>
+
+        <div class="actions">
+          <button type="submit" id="addBtn">Add Item</button>
+          <button type="button" id="clearBtn" class="danger">Clear All</button>
+        </div>
+
+        <p id="message" class="message" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Inventory List</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody id="inventoryBody"></tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Inventory Chart</h2>
+      <canvas id="inventoryChart" width="400" height="200"></canvas>
+      <p class="hint">
+        Low stock items (quantity &lt; 10) are highlighted to make restocking easier.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>BUS237 Assignment 2 — Inventory Dashboard</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
