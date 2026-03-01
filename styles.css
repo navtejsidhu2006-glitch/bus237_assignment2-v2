@@ -1,0 +1,190 @@
+/* =========================
+   Theme Variables
+========================= */
+
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #e5e7eb;
+
+  /* Purple accents */
+  --accent: #7c3aed;
+  --accent-soft: #ede9fe;
+
+  --danger: #dc2626;
+  --success: #16a34a;
+}
+
+html[data-theme="dark"] {
+  --bg: #000000;
+  --surface: #0b0b0b;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: #27272a;
+
+  --accent: #7c3aed;
+  --accent-soft: #2a163f;
+
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+/* =========================
+   Base Layout
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.site-header {
+  padding: 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--accent);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.nav-link.active {
+  background: var(--accent-soft);
+  font-weight: 700;
+}
+
+.theme-toggle {
+  margin-left: auto;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* =========================
+   Form Styling
+========================= */
+
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   Messages
+========================= */
+
+.message {
+  min-height: 18px;
+  font-size: 0.95rem;
+}
+
+.message.ok {
+  color: var(--success);
+}
+
+.message.err {
+  color: var(--danger);
+}
+
+/* =========================
+   Table
+========================= */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+  padding: 16px;
+  text-align: center;
+  color: var(--muted);
+}
